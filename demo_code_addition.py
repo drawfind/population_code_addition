@@ -1,5 +1,19 @@
-# (c) Heiko Hoffmann
 # This python code demonstrates the emerging correlations from adding two population codes
+
+# Copyright 2024 Heiko Hoffmann
+
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+
+#    http://www.apache.org/licenses/LICENSE-2.0
+
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 
 import numpy as np
 import math
@@ -133,12 +147,12 @@ ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 
 #ax.set_title('Population Codes', fontsize=16)
-ax.plot(x, hA, label='Code A', color='blue')
-ax.plot(x, theo_A, linestyle='--', color='blue')
-ax.plot(x, hB, label='Code B', color='green')
-ax.plot(x, theo_B, linestyle='--', color='green')
-ax.plot(x, hC, label='Code A+B', color='red')
-ax.plot(x, theo_C, linestyle='--', color='red')
+ax.plot(x, hA, label='Code A', linewidth=2, color='0.8')
+ax.plot(x, theo_A, linestyle='--', linewidth=2, color='0.8')
+ax.plot(x, hB, label='Code B', linewidth=2, color='0.6')
+ax.plot(x, theo_B, linestyle='--', linewidth=2, color='0.6')
+ax.plot(x, hC, label='Code A+B', linewidth=2, color='0')
+ax.plot(x, theo_C, linestyle='--', linewidth=2, color='0')
 ax.legend(fontsize=14)
 ax.tick_params(axis='both', which='both', labelsize=14)
 ax.set_xlabel("Preferred Value", fontsize=14)
@@ -150,10 +164,8 @@ n1_C = int((a+b)*N/2+N/2)
 n2_C = n1_C + 1
 
 # Compute Pearson correlation coefficient
-correlation_coefficient, p_value = pearsonr(rf_C[n1_C], rf_C[n2_C])
-print(f"Correlation coefficient for A+B (bin size {firing_rate_bin}): {correlation_coefficient}")
 correlation_coefficient, p_value = pearsonr(C[n1_C,:], C[n2_C,:])
-print(f"Correlation coefficient for A+B (bin size 1): {correlation_coefficient}")
+print(f"Correlation coefficient for A+B: {correlation_coefficient}")
 
 # Create figure showing firing rate distribution between the two neurons
 fig, ax = plt.subplots()
