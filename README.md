@@ -1,6 +1,6 @@
 # Model for computing with population-encoded variables
 
-The code in this repository accompanies the article "Model for computing with population-encoded variables explains noise correlations."
+The code in this repository accompanies the article "Model for computing with population-encoded variables explains neural correlations."
 
 This code requires Python 3 and the modules numpy, scipy, matplotlib, and tqdm. 
 
