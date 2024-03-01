@@ -6,7 +6,7 @@ The code in this repository accompanies the article "Model for computing with po
 
 This code requires Python 3 and the modules numpy, scipy, matplotlib, and tqdm. 
 
-It has been tested with Python 3.10.9 running on an Apple MacBook Air with M1 chip, 8 GB memory, and macOS Ventura 13.5.2.
+The code has been tested with Python 3.10.9 running on an Apple MacBook Air with M1 chip, 8 GB memory, and macOS Ventura 13.5.2.
 
 ## Installation
 
@@ -25,7 +25,7 @@ python demo_code_addition.py
 
 The typical run time is 1 minute on an Apple M1.
 
-The code will generate and display 4 figures.
+The code will generate and display four figures.
 
 Figure 1: Spike trains of the population codes A, B, and A + B.
 
