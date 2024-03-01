@@ -25,7 +25,7 @@ python demo_code_addition.py
 
 The typical run time is 1 minute on an Apple M1.
 
-The code will generate and display four figures.
+This demo will generate and display four figures:
 
 Figure 1: Spike trains of the population codes A, B, and A + B.
 
