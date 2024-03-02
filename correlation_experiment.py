@@ -1,4 +1,7 @@
-# This python code simulates the model and computes the correlation coefficients as function of the distance in preferred values for a set of population-code sizes.
+# This python code simulates the model and computes the correlation
+# coefficients as function of the distance in preferred values for a set
+# of population-code sizes. This code generates the data used in Fig. 3a
+# in the manuscript.
 
 # Copyright 2024 Heiko Hoffmann
 

@@ -35,6 +35,8 @@ Figure 3: Firing rates between two neurons with nearby preferred values.
 
 Figure 4: Firing rates between two neurons with distant preferred values.
 
+Combined, these four figures create a figure as Figure 2 in the main manuscript.
+
 ## Experiments
 
 To run the experiment that computes the correlation coefficients as function of the distance in preferred values, type

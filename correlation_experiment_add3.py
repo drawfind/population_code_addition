@@ -1,4 +1,8 @@
-# This python code simulates the model for ternary functions, adding three population codes. The code computes the correlation coefficients as function of the distance in preferred values for a set of population-code sizes.
+# This python code simulates the model for ternary functions, adding
+# three population codes. The code computes the correlation coefficients
+# as function of the distance in preferred values for a set of
+# population-code sizes. This code generates the data used in Fig. 6 in
+# the manuscript.
 
 # Copyright 2024 Heiko Hoffmann
 
