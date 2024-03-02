@@ -45,7 +45,7 @@ This program generates data as was used for Figure 3a in the main manuscript.
 
 To run the experiment with ternary functions, type
 ```bash
-python correlation_experiment.py     
+python correlation_experiment_add3.py     
 ```
 This program generates data as was used for Figure 6 in the main manuscript.
 
