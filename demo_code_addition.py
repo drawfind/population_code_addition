@@ -1,4 +1,5 @@
-# This python code demonstrates the emerging correlations from adding two population codes
+# This python code demonstrates the computational model for computing with
+# population-encoded variables.
 
 # Copyright 2024 Heiko Hoffmann
 
@@ -60,20 +61,21 @@ def theoretical_code(x, mu, sigma):
     
 
 # Parameters for the simulation
-N = 51
-num_steps = 2000000
+N = 51 # Population code size
+num_steps = 2000000 # Number of simulation time steps
 histogram_steps = 1000
-a = -0.2
-a_sig = 0.2
-b = 0.2
-b_sig = 0.3
-firing_rate_bin = 500
+a = -0.2 # Variable encoded in code A
+a_sig = 0.2 # Tuning standard deviation for code A
+b = 0.2 # Variable encoded in code B
+b_sig = 0.3 # Tuning standard deviation for code B
+firing_rate_bin = 500 # Bin size for computing firing rate
 
 # Initialize population codes A, B, and C
 A = np.zeros((N, num_steps))
 B = np.zeros((N, num_steps))
 C = np.zeros((N, num_steps))
 
+# Loop through simulation time steps
 for t in tqdm(range(num_steps)):
     A[:,t] = model.create_code(a,a_sig,N)
     B[:,t] = model.create_code(b,b_sig,N)
