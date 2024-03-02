@@ -34,3 +34,21 @@ Figure 2: Firing rate distributions over neurons' preferred values for each of t
 Figure 3: Firing rates between two neurons with nearby preferred values.
 
 Figure 4: Firing rates between two neurons with distant preferred values.
+
+## Experiments
+
+To run the experiment that computes the correlation coefficients as function of the distance in preferred values, type
+```bash
+python correlation_experiment.py     
+```
+This program generates data as was used for Figure 3a in the main manuscript.
+
+To run the experiment with ternary functions, type
+```bash
+python correlation_experiment.py     
+```
+This program generates data as was used for Figure 6 in the main manuscript.
+
+
+
+
