@@ -64,6 +64,11 @@ python plot_correlation_vs_distance.py data.txt
 
 This program generates a figure as Figure 3a in the main manuscript.
 
+To run the experiment for adding three population codes, A + B + C, type
+```bash
+python correlation_experiment_add3.py > data_add3.txt    
+```
+This program generates data as was used for Figure 6 in the main manuscript.
 
 
 
