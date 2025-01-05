@@ -44,7 +44,7 @@ for t in tqdm(range(num_trials),file=sys.stderr):
         for i in range(num_steps):
             A = model.create_code(a, a_sig, N)
             B = model.create_code(a, a_sig, N)
-            # Compute composite code A + B
+            # Compute population code of subtraction A - B
             C[:,i] = model.compute(A, B)
 
         # Compute mean value

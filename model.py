@@ -1,4 +1,4 @@
-# This python code contains the main functions for the computation model
+# This python code contains the main functions for the computational model
 
 # Copyright 2024 Heiko Hoffmann
 
@@ -42,7 +42,7 @@ def create_code(x, sigma, N):
             
     return code
 
-# Add two population codes and return the composition code
+# Subtract two population-coded variables and return the resulting code
 def compute(code1, code2):
     N = code1.shape[0]
     if code2.shape[0] != N:
@@ -51,7 +51,29 @@ def compute(code1, code2):
     res = np.zeros(N)
     N2 = int(N/2)
 
-    # Loop through all connections to compute the composition code
+    # Loop through all connections to compute the resulting code
+    for i in range(N):
+        if code1[i] == 1:
+            x = i - N2
+            for j in range(N):
+                if code2[j] == 1:
+                    y = j - N2
+                    z = (x - y + N2) % N # using periodic boundary
+                    res[z] = 1
+
+    return res
+
+
+# Add two population-coded variables and return the resulting code
+def compute_add(code1, code2):
+    N = code1.shape[0]
+    if code2.shape[0] != N:
+        sys.exit("Error: Both codes have to be of the same size (it's possible to adapt this program to allow different sizes)")
+        
+    res = np.zeros(N)
+    N2 = int(N/2)
+
+    # Loop through all connections to compute the resulting code
     for i in range(N):
         if code1[i] == 1:
             x = i - N2
@@ -59,6 +81,28 @@ def compute(code1, code2):
                 if code2[j] == 1:
                     y = j - N2
                     z = (x + y + N2) % N # using periodic boundary
+                    res[z] = 1
+
+    return res
+
+
+# Multiply two population-coded variables and return the resulting code
+def compute_mult(code1, code2):
+    N = code1.shape[0]
+    if code2.shape[0] != N:
+        sys.exit("Error: Both codes have to be of the same size (it's possible to adapt this program to allow different sizes)")
+        
+    res = np.zeros(N)
+    N2 = int(N/2)
+
+    # Loop through all connections to compute the resulting code
+    for i in range(N):
+        if code1[i] == 1:
+            x = i - N2
+            for j in range(N):
+                if code2[j] == 1:
+                    y = j - N2
+                    z = ((x*y) // N2 + N2) % N # using periodic boundary
                     res[z] = 1
 
     return res
