@@ -12,8 +12,8 @@ The code has been tested with Python 3.10.9 running on an Apple MacBook Air with
 
 In a terminal, execute the following commands
 ```bash
-git clone https://github.com/drawfind/population_code_addition
-cd population_code_addition
+git clone https://github.com/drawfind/population_code_correlations
+cd population_code_correlations
 ```
 
 ## Demonstrations
@@ -49,7 +49,7 @@ To simulate the Deneve model for subtraction, run
 python demo_code_subtraction_Deneve.py
 ```
 
-## Experiments
+## Experiment
 
 To run the experiment that computes the correlation coefficients as function of the distance in preferred values, type
 ```bash
